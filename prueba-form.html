@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style-form.css">
+
+
+  <title>Digital Coach | Contacto</title>
+</head>
+<body>
+  <div id="contacto" class="todo">
+    <div class="container">
+      <div class="digital-coach-wrap">
+        <div class="digital-coach-wrap-contenido">
+          <a href="./prueba-form.html"><img src="./img/IMG-20230519-WA0028.jpg" alt="logo" class="logo"></a>
+          <h1>Contactanos</h1>
+          <p class="subtitulo">Unite a nuestra comunidad !!</p>
+          <p>Estamos aquí para ayudarte. Completá el formulario y a la brevedad nos pondremos en contacto con vos</p>
+          <p>Esperamos ansiosos tu solicitud...</p>
+        </div>
+        <div class="digital-coach-wrap-formulario">
+          <h3>Formulario de Contacto</h3>
+          <form action="" class="formulario" id="formulario">
+            <!-- grupo Nombre -->
+            <div class="formulario__grupo" id="grupo__nombre">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre">
+              <p class="formulario__input-error">El Nombre podrá contener de 3 a 30 caracteres y solo pueden ser letras</p>
+            </div>
+
+            <!-- grupo Apellido -->
+            <div class="formulario__grupo" id="grupo__apellido">
+              <label for="apellido">Apellido</label>
+              <input type="text" id="apellido" name="apellido">
+              <p class="formulario__input-error">El Apellido podrá contener de 3 a 30 caracteres y solo pueden ser letras</p>
+            </div>
+
+            <!-- grupo Email -->
+            <div class="formulario__grupo" id="grupo__email">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="correo@correo.com">
+              <p class="formulario__input-error">El email puede contener números, letras y guión bajo</p>
+            </div>
+            
+            <!-- grupo Edad -->
+            <div class="formulario__grupo" id="grupo__edad">
+              <label for="edad">Edad</label>
+              <input type="number" id="edad" name="edad">
+              <p class="formulario__input-error">Ingresar solo números</p>
+            </div>
+            
+            <!-- grupo Dirección -->
+            <div class="formulario__grupo" id="grupo__dir">
+              <label for="dir">Dirección</label>
+              <input type="text" id="dir" name="dir">
+              <p class="formulario__input-error">La dirección podrá contener números, letras y guión medio</p>
+            </div>
+            
+            <!-- grupo Teléfono -->
+            <div class="formulario__grupo" id="grupo__telefono">
+              <label for="telefono">Número Telefónico</label>
+              <input type="phone" id="telefono" name="telefono" placeholder="111111111111">
+              <p class="formulario__input-error">Podrá ingresar solo números y de 7 a 14 dígitos sin espacio</p>
+            </div>
+            
+            <!-- grupo Formación -->
+            <div class="formulario__grupo" id="grupo__formacion">
+              <label for="formacion">Formación</label>
+              <div class="select">
+                <select class="opcion-predeterminada" name="formacion" id="formacion">
+                  <option selected disabled>Elige tu preferida...</option>
+                  <option value="forma1" id="formac1">Formación1</option>
+                  <option value="forma2" id="formac2">Formación2</option>
+                  <option value="forma3">Formación3</option>
+                  <option value="forma4">Formación4</option>
+                  <option value="forma5">Formación5</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- grupo Checkbox -->
+            <div class="formulario__grupo checkbox" id="grupo__tildar-varias-opciones">
+              <h3>Otras opciones</h3>
+              <div class="salto-de-linea">
+                <input type="checkbox" id="cbox1" value="primer_checkbox">
+                <label class="label-check-box">Este es mi primer checkbox</label>
+              </div>
+              <br>
+              <div class="salto-de-linea">
+                <input type="checkbox" id="cbox2" value="segundo_checkbox">
+                <label for="cbox2" class="label-check-box">Este es mi segundo checkbox</label>
+              </div>
+              <br>
+              <div class="salto-de-linea">
+                <input type="checkbox" id="cbox3" value="tercer_checkbox">
+                <label for="cbox3" class="label-check-box">Este es mi tercer checkbox</label>
+              </div>
+              <br>
+              <div class="salto-de-linea">
+                <input type="checkbox" id="cbox2" value="cuarto_checkbox">
+                <label for="cbox4" class="label-check-box">Este es mi cuarto checkbox</label>
+              </div>
+            </div>
+            <div>
+              <p class="formulario__mensaje-error-texto" id="formulario__mensaje-error"><i class="fa-regular fa-triangle-exclamation"></i> <b>Error!!</b> Por favor completa el formulario correctamente</p>
+            </div>
+
+            <!-- grupo Botón enviar -->
+            <div class="formulario__grupo formulario__grupo-btn-enviar" id="grupo__btn">
+              <button type="submit" class="btn">Enviar</button>
+              <p class="formulario-msj-exito" id="formulario-msj-exito">El formulario ha sido enviado exitosamente!!</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./contacto-validacion.js"></script>
+  <script src="https://kit.fontawesome.com/c453cdbf08.js" crossorigin="anonymous"></script>
+</body>
+</html>
