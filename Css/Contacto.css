@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&family=Bruno+Ace&family=Bruno+Ace+SC&family=Carter+One&family=Caveat&family=Caveat+Brush&family=Goldman:wght@400;700&family=Lora:wght@500&family=Montserrat:wght@300;400;700&family=Nunito:wght@200;400;700;900&family=Patua+One&family=Permanent+Marker&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +13,7 @@ body {
 }
 
 .todo {
-  background: linear-gradient(to bottom right, #2a2f4f, #917fb3 , #c87cd7, #be1be7);
+  background: linear-gradient(to bottom right, #2a2f4f, #917fb3, #c87cd7, #be1be7);
   height: auto;
   /* padding-top: 150px;
   padding-bottom: 50px; */
@@ -20,97 +21,97 @@ body {
 }
 
 /* Header */
-.container-encabezado{
-    display:grid;
-    grid-template-columns: (repeat 2, 1fr);
-    grid-template-rows: (20px 15px); 
-    height: 100vh;
-    align-self: stretch;
+.container-encabezado {
+  display: grid;
+  grid-template-columns: (repeat 2, 1fr);
+  grid-template-rows: (20px 15px);
+  height: 100vh;
+  align-self: stretch;
 
-    height: 148px;
+  height: 148px;
 
-    /* display: grid;
+  /* display: grid;
     grid-template-columns: 1fr 1.5fr; */
-    /* grid-gap: 5em; */
+  /* grid-gap: 5em; */
 }
-    
-    
+
+
 /* .color__fondo-superior{
     grid-column: 1/4;
     grid-row: 1/6;   
     background-color: rgb(77, 133, 133);
 } */
 
-.encabezado{
-    grid-column: 1/3;
-    grid-row: 1/2;
-    
-    display: flex;
-    justify-content: space-around;
-    
-    padding: 0 20px;
-    background-color: rgb(39, 32, 54) ;
-    align-items: center;
+.encabezado {
+  grid-column: 1/3;
+  grid-row: 1/2;
 
-    min-height: 101.6px;
-        
-}
-    
-.Logo{
-    color: #29fae8;
-    font-family: 'Bruno Ace SC', cursive;
-    text-shadow: 1.5px 1.5px #846c8b;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-left: 20px;    
-    margin-right: 20px;
-    font-size: 20px;       
+  display: flex;
+  justify-content: space-around;
+
+  padding: 0 20px;
+  background-color: rgb(39, 32, 54);
+  align-items: center;
+
+  min-height: 101.6px;
+
 }
 
-.Bienvenidos{
-    color: #29fae8;
-    font-family: 'Bruno Ace SC', cursive;   
-    text-shadow: 0.5px 0.5px #b184be;
-    display: flex;
-    justify-content: end;
-    font-size: 15px;
-    margin-right: 20px; 
-    margin-left: 20px;
-    align-items:end ;
+.Logo {
+  color: #29fae8;
+  font-family: 'Bruno Ace SC', cursive;
+  text-shadow: 1.5px 1.5px #846c8b;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
 }
 
-.nav-general{
-    background-color: rgb(62, 52, 85);
-    grid-column: 1/3;   
-    grid-row: 2/3;    
-    text-decoration: none;
-    display: inline-grid;
-    align-items: center;
-
-    min-height: 44px;
+.Bienvenidos {
+  color: #29fae8;
+  font-family: 'Bruno Ace SC', cursive;
+  text-shadow: 0.5px 0.5px #b184be;
+  display: flex;
+  justify-content: end;
+  font-size: 15px;
+  margin-right: 20px;
+  margin-left: 20px;
+  align-items: end;
 }
 
-.Ul-li-especifico{
-    list-style:none;
-    text-transform: uppercase;
-      
-    color: #f0f0f0;
-    text-shadow: 1px 1px  #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 200;
-    font-size: 14px;
-        
-    display: flex;
-    justify-content: space-between;
-    margin-left: 40px;
-    margin-right: 80px;
-    text-align: center;
+.nav-general {
+  background-color: rgb(62, 52, 85);
+  grid-column: 1/3;
+  grid-row: 2/3;
+  text-decoration: none;
+  display: inline-grid;
+  align-items: center;
+
+  min-height: 44px;
 }
 
-.Links{
-    text-decoration: none;
-    list-style: none;
+.Ul-li-especifico {
+  list-style: none;
+  text-transform: uppercase;
+
+  color: #f0f0f0;
+  text-shadow: 1px 1px #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-right: 80px;
+  text-align: center;
+}
+
+.Links {
+  text-decoration: none;
+  list-style: none;
 }
 
 
@@ -158,8 +159,8 @@ p {
 }
 
 .digital-coach-wrap-contenido {
-  /* text-align: left; */
-  text-align: center;
+  text-align: left;
+  /* text-align: center; */
   padding-left: 40px
 }
 
@@ -172,6 +173,12 @@ p {
 .digital-coach-wrap-contenido h1,
 .digital-coach-wrap-contenido p.subtitulo {
   color: #49C6B7;
+}
+
+.digital-coach-wrap-contenido h1,
+.digital-coach-wrap-contenido p {
+  position: relative;
+  top: 400px;
 }
 
 .digital-coach-wrap-contenido h1 {
@@ -196,13 +203,14 @@ p {
   background: #fff;
   border-radius: 3px;
   padding: 50px;
+  max-width: 700px;
 }
 
 .digital-coach-wrap-formulario h3 {
   padding-bottom: 30px;
 }
 
-.formulario__grupo{
+.formulario__grupo {
   margin-bottom: 25px;
 }
 
@@ -214,7 +222,8 @@ p {
 .digital-coach-wrap-formulario form label {
   display: block;
   text-transform: uppercase;
-  cursor: pointer; /* Para que al posicionarte sobre el subtítulo de cada campo aparezca una manito y al hacer click sobre el mismo se te habilite el campo. Es una ayuda para el usuario pero no es indispensable  */
+  cursor: pointer;
+  /* Para que al posicionarte sobre el subtítulo de cada campo aparezca una manito y al hacer click sobre el mismo se te habilite el campo. Es una ayuda para el usuario pero no es indispensable  */
 }
 
 
@@ -228,30 +237,31 @@ p {
   color: #4d4d4d;
 }
 
-.formulario__grupo input:focus{
+.formulario__grupo input:focus {
   outline: none;
   border: 3px solid #917fb3;
 
 }
-.opcion-predeterminada:focus{
+
+.opcion-predeterminada:focus {
   outline: none;
   border: 3px solid #917fb3;
 }
 
 .digital-coach-wrap-formulario form input,
-.digital-coach-wrap-formulario form select option{
+.digital-coach-wrap-formulario form select option {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   color: rgba(77, 77, 77, 0.8);
 }
 
-.checkbox{
+.checkbox {
   display: flex;
   /* align-items: center; */
   flex-wrap: wrap;
 }
 
-.checkbox h3{
+.checkbox h3 {
   padding-bottom: 15px;
   display: block;
   text-transform: uppercase;
@@ -259,24 +269,25 @@ p {
   font-weight: 400;
 }
 
-.salto-de-linea{
+.salto-de-linea {
   display: flex;
   align-items: center;
   width: 100%;
 }
-.salto-de-linea input{
+
+.salto-de-linea input {
   display: block;
   max-width: 30px;
 }
 
-.salto-de-linea label{
+.salto-de-linea label {
   display: block;
 }
 
 
 
 
-.formulario__input-error{
+.formulario__input-error {
   font-size: 14px;
   margin-bottom: 0;
   display: none;
@@ -284,9 +295,10 @@ p {
 
 
 
-.formulario__input-error-activo{
+.formulario__input-error-activo {
   display: block;
-  /* opacity: 0; */ /* sirve para que un elemnto sea invisible...sin embargo ocupa espacio de todas maneras */
+  /* opacity: 0; */
+  /* sirve para que un elemnto sea invisible...sin embargo ocupa espacio de todas maneras */
 }
 
 
@@ -306,19 +318,19 @@ p {
   transition: .5s ease-out;
 }
 
-button:hover{
+button:hover {
   box-shadow: 3px 0px 50px rgb(130, 130, 130);
   transition: .3s ease-out;
 }
 
-.formulario-msj-exito{
+.formulario-msj-exito {
   text-align: center;
   color: #49C6B7;
   margin: 0;
   display: none;
 }
 
-.formulario-msj-exito-activo{
+.formulario-msj-exito-activo {
   display: block;
 }
 
@@ -326,15 +338,16 @@ button:hover{
 /* Estilo para Error en inputs */
 
 /* Estas son las clases que están puesta por defecto, antes de validar. Pero no se aplica hasta que no se ingresa a al menos un campo y js valide. Una vez que se valida el campo respectivo, si lo ingresado por el usurio no coincide con las expreciones regulares js agrega estas clase*/
-.formulario__campos-error p{
+.formulario__campos-error p {
   display: block;
   color: crimson;
 }
 
-.formulario__campos-error input{
+.formulario__campos-error input {
   border: 3px solid crimson !important;
 }
-.formulario__campos-error-select{
+
+.formulario__campos-error-select {
   border: 3px solid crimson !important;
 }
 
@@ -345,78 +358,90 @@ button:hover{
   display: none;
 }
 
-.formulario__mensaje-error-texto-activo{
+.formulario__mensaje-error-texto-activo {
   display: block;
 }
 
 
-
 /* Footer */
 
-.container-footer{
-    display:grid;
-    grid-template-columns: (1fr);
-    grid-template-rows: (40px);
+.container-footer {
+  display: grid;
+  grid-template-columns: (1fr);
+  grid-template-rows: (40px);
 }
-.pie__div{
-    grid-column: 1/4;
-    grid-row: 5/6;
-    text-align: center;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(39, 32, 54);
+
+.pie__div {
+  grid-column: 1/4;
+  grid-row: 5/6;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(39, 32, 54);
+  min-height: 136px;
 }
-.pie__lista{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: unset;
-}    
-.pie__items{
-    margin: 0 30px;
-    list-style: none;
-    color:  #29fae8;
-    text-shadow: 0.5px 0.5px  #736479;
+
+.pie__lista {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: unset;
+  margin: 16px 0;
 }
-.pie__icono{
-    text-decoration: none;
+
+.pie__items {
+  margin: 0 30px;
+  list-style: none;
+  color: #29fae8;
+  text-shadow: 0.5px 0.5px #736479;
 }
-.pie__icono img{
-    width: 30px; 
-    height: 30px;
+
+.pie__icono {
+  text-decoration: none;
 }
-.pie__texto{
-    margin: 10px 0;
-    color: #29fae8;
-    font-size: 12px;
-    text-shadow: 0.5px 0.5px  #736479;
+
+.pie__icono img {
+  width: 30px;
+  height: 30px;
+}
+
+.pie__texto {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 10px 0;
+  color: #29fae8;
+  font-size: 12px;
+  text-shadow: 0.5px 0.5px #736479;
 }
 
 
 /* Responsive */
 
 @media only screen and (max-width: 768px) {
-  .todo{
+  .todo {
     height: 100%;
     padding-top: 50px;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px; */
   }
+
   .digital-coach-wrap {
     grid-template-columns: 1fr;
     grid-gap: 1em;
   }
+
   .digital-coach-wrap-contenido {
     text-align: center;
     padding: auto;
   }
+
   .digital-coach-wrap-contenido img {
     display: block;
     margin: 0 auto;
     margin-bottom: 40px;
   }
+
   .digital-coach-wrap-formulario form button {
     width: 100%;
     margin: 0px;
