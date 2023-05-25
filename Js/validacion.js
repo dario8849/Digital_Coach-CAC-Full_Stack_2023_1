@@ -203,6 +203,7 @@ const validarCampo = (expresion, input, campo) => {
 inputs.forEach((input) => {
     input.addEventListener('keyup', validarFormulario); 
     input.addEventListener('blur', validarFormulario);
+    console.log("pasó por acá!!");
 });
 
 
@@ -222,4 +223,3 @@ formulario.addEventListener('submit', (e)=> {
         document.getElementById('formulario__mensaje-error').classList.add('formulario__mensaje-error-texto-activo');
     }
 });
-
