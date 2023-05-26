@@ -54,7 +54,7 @@ elegirFormacion.addEventListener('change', (event) => {
 
 elegirFormacion.addEventListener('blur', event => {
     console.log(event.target.value + "El usuario salió del campo formación")
-    if(event.target.value == 'Elige tu preferida...'){
+    if(event.target.value == 'Elige tu preferido...'){
         document.getElementById('formacion').classList.add('formulario__campos-error-select');
         console.log("El Usuario No sa seleccionado opcion: " + event.target.value);
         console.log(campos.formacion)
@@ -134,7 +134,7 @@ checkbox2.addEventListener("change", validaCheckbox, false);
 checkbox3.addEventListener("change", validaCheckbox, false);
 checkbox4.addEventListener("change", validaCheckbox, false);
 
-const checkboxValidado = false
+let checkboxValidado = false
 
 function validaCheckbox(){
   let tildado1 = checkbox1.checked;
@@ -149,7 +149,7 @@ function validaCheckbox(){
   return checkboxValidado
 };
 
-console.log('el chbx no se validó' + checkboxValidado);
+console.log('el chbx no se validó?' + checkboxValidado);
 
 const validarFormulario = (e) => {
     //para identificar cuál es el campo que queremos validar oportunamente
@@ -209,7 +209,7 @@ inputs.forEach((input) => {
 
 formulario.addEventListener('submit', (e)=> {
     e.preventDefault();    ////esta funcion es para que el usurio no envíe los datos dejando campos sin completar. Lo que hace es evitar que el formulario envíe los datos al apretar el boton si no se han completado todos los campos. O sea no deja que se envíen los datos al apretar el botón tipo submit
-    if( campos.nombre && campos.apellido && campos.email && campos.edad && campos.dir && campos.telefono && campos.formacion && checkboxValidado ) {
+    if( campos.nombre && campos.apellido && campos.email && campos.edad && campos.dir && campos.telefono && campos.formacion && checkboxValidado==true ) {
         formulario.reset()
         console.log("Se validó todo con éxito  !!!!");
         document.getElementById('formulario__mensaje-error').classList.remove('formulario__mensaje-error-texto-activo');
