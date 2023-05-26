@@ -8,9 +8,8 @@ body {
 .container {
     display: grid;
     grid-template-columns: (repeat 3, 1fr);
-    grid-template-rows: (40px 30px 15px 100px 100px 40px);
+    grid-template-rows: auto;
     height: 100vh;
-    align-self: stretch;
 }
 
 
@@ -24,14 +23,11 @@ body {
 .encabezado {
     grid-column: 1/4;
     grid-row: 1/2;
-
     display: flex;
     justify-content: space-around;
-
     padding: 0 20px;
     background-color: rgb(39, 32, 54);
     align-items: center;
-
 }
 
 .Logo {
@@ -44,11 +40,31 @@ body {
     margin-left: 20px;
     margin-right: 20px;
     font-size: 20px;
+    animation: mover 3s linear forwards, cambioColor 3s linear infinite;
+}
+
+@keyframes mover {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes cambioColor {
+    10% {
+        color: rgb(39, 32, 54);
+    }
+    80% {
+        color: #29fae8;
+    }
 }
 
 .Bienvenidos {
     color: #29fae8;
     font-family: 'Bruno Ace SC', cursive;
+    letter-spacing: 1.4px;
     text-shadow: 0.5px 0.5px #b184be;
     display: flex;
     justify-content: end;
@@ -70,17 +86,15 @@ body {
 .Ul-li-especifico {
     list-style: none;
     text-transform: uppercase;
-
     color: #f0f0f0;
     text-shadow: 1px 1px #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 200;
-    font-size: 14px;
-
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
     display: flex;
     justify-content: space-between;
-    margin-left: 40px;
-    margin-right: 80px;
+    /* margin-left: 40px;
+    margin-right: 80px; */
+    margin: 10px 40px;
     text-align: center;
 
 }
@@ -90,86 +104,74 @@ body {
     list-style: none;
 }
 
-.QuienesSomos {
+.Quienes-Somos {
     grid-column: 1/4;
     grid-row: 3/4;
-
     display: flex;
-
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 500;
-    font-size: 30px;
-    color: rgb(252, 221, 255);
     justify-content: center;
-    padding-top: 80px;
-    padding-bottom: 50px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.Quienes-Somos h5{
+    font-family: 'Nunito', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    color: rgb(252, 221, 255);
 }
 
 .intro {
     grid-column: 1/4;
     grid-row: 4/5;
-
     margin-left: 20px;
     margin-right: 20px;
     color: rgb(252, 221, 255);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 18px;
-    font-weight: 100;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1.1px;
     display: flex;
     justify-content: center;
     text-align: center;
+}
 
+.box-container {
+    grid-column: 1/4;
+    grid-row: 5/6;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 80px;
 }
 
 .box {
-    grid-column: 1/4;
-    grid-row: 5/6;
-
-    display: flex;
-    justify-content: space-between;
-
-    font-size: 12px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-
-.box-Euge {
-
     padding: 10px;
     background-color: rgb(252, 221, 255);
-    margin: 20px 20px;
+    margin: 20px 130px;
+    max-width: 350px;
+    height: 450px;
+    border: 8px solid rgb(62, 52, 85);
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.25s;
 }
 
-.box-Gabi {
-
-    padding: 10px;
-    background-color: rgb(252, 221, 255);
-    margin: 20px 20px;
+.box:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgb(41, 250, 232, 0.3);
 }
 
-.box-Dario {
-
-    padding: 10px;
-    background-color: rgb(252, 221, 255);
-    margin: 20px 20px;
-
+.box h5{
+    font-size: 19px;
 }
-
-.box-Jujo {
-
-    padding: 10px;
-    background-color: rgb(252, 221, 255);
-    margin: 20px 20px;
-
-}
-
 
 .pie__div {
     grid-column: 1/4;
     grid-row: 6/7;
     text-align: center;
-    /* ojo con esta propiedad! */
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -209,22 +211,54 @@ body {
 
 
 /* Responsive */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 705px) {
     .nav-general {
-        height: 160px;
+        padding: 100px auto;
+        height: 250px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     .Ul-li-especifico {
-        height: 150px;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
 
+    .Ul-li-especifico li{
+        min-width: 300px;
+        padding: 2px 0;
+        border: 1px solid #29fae8;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+
     .Links {
         letter-spacing: 3px;
         font-size: 15px;
+    }
+
+    .box-container {
+        padding: 0;
+    }
+    
+    .box {
+        margin: 20px 10px;
+        max-width: 350px;
+    }
+}
+
+@media only screen and (min-width: 706px) and (max-width: 800px){
+    .box-container {
+        padding: 0 40px;
+    }
+    
+    .box {
+        margin: 20px 50px;
+        max-width: 350px;
     }
 }

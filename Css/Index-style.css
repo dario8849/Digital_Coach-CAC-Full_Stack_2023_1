@@ -8,7 +8,8 @@ body {
 .container {
     display: grid;
     grid-template-columns: (repeat 3, 1fr);
-    grid-template-rows: (40px 30px 15px 100px 100px 40px);
+    /* grid-template-rows: (40px 30px 15px 100px 100px 40px); */
+    grid-template-rows: (auto);
     height: 100vh;
     align-self: stretch;
 }
@@ -41,11 +42,21 @@ body {
     margin-left: 20px;
     margin-right: 20px;
     font-size: 20px;
+    animation: mover 3s linear forwards, cambioColor 3s linear infinite;
+}
+@keyframes mover {
+    0%{transform: translateX(-100%);}
+    100%{transform: translateX(0%)}
+}
+@keyframes cambioColor{
+    10%{color:rgb(39, 32, 54);}
+    80%{color: #29fae8;}
 }
 
 .Bienvenidos {
     color: #29fae8;
     font-family: 'Bruno Ace SC', cursive;
+    letter-spacing: 1.4px;
     text-shadow: 0.5px 0.5px #b184be;
     display: flex;
     justify-content: end;
@@ -67,13 +78,10 @@ body {
 .Ul-li-especifico {
     list-style: none;
     text-transform: uppercase;
-
     color: #f0f0f0;
     text-shadow: 1px 1px #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 200;
-    font-size: 14px;
-
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
     display: flex;
     justify-content: space-between;
     margin-left: 40px;
@@ -89,11 +97,10 @@ body {
 .Index {
     grid-column: 1/4;
     grid-row: 3/4;
-
     display: flex;
-
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.2px;
     font-size: 30px;
     color: rgb(252, 221, 255);
     justify-content: center;
@@ -113,9 +120,10 @@ body {
     margin-left: 20px;
     margin-right: 20px;
     color: rgb(252, 221, 255);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 18px;
-    font-weight: 100;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1.1px;
     justify-content: center;
     text-align: center;
 }
@@ -181,16 +189,28 @@ body {
 /* Responsive */
 @media screen and (max-width: 700px) {
     .nav-general {
-        height: 160px;
+        padding: 100px auto;
+        height: 250px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     .Ul-li-especifico {
-        height: 150px;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .Ul-li-especifico li{
+        min-width: 300px;
+        padding: 2px 0;
+        border: 1px solid #29fae8;
+        border-radius: 10px;
+        margin-bottom: 5px;
     }
 
     .Links {

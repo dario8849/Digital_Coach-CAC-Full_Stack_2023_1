@@ -104,9 +104,15 @@ body {
 
 .consulta-API__texto h3,
 .consulta-API__texto p {
-    font-family: "Montserrat", sans-serif;
-    font-size: medium;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.1px;
     color: rgb(252, 221, 255);
+}
+
+.consulta-API__texto h3{
+    font-weight: bold;
 }
 
 .consulta-API__tabla {
@@ -209,16 +215,30 @@ td {
 /* Responsive */
 @media screen and (max-width: 700px) {
     .nav-general {
-        height: 160px;
+        padding: 100px auto;
+        height: 250px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 
     .Ul-li-especifico {
-        height: 150px;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .Ul-li-especifico li{
+        min-width: 300px;
+        padding: 2px 0;
+        border: 1px solid #29fae8;
+        border-radius: 10px;
+        margin-bottom: 5px;
     }
 
     .Links {
