@@ -344,6 +344,17 @@ button:hover {
   border: 3px solid crimson !important;
 }
 
+.material-symbols-outlined {
+  position: relative;
+  top: 20px;
+  right: 20px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
 .formulario__mensaje-error-texto {
   text-align: center;
   color: crimson;
@@ -439,7 +450,7 @@ button:hover {
   }
 
   .Ul-li-especifico li{
-    min-width: 180px;
+    min-width: 250px;
     padding: 2px 0;
     border: 1px solid #29fae8;
     border-radius: 10px;
@@ -474,6 +485,11 @@ button:hover {
   .digital-coach-wrap-formulario form button {
     width: 100%;
     margin: 0px;
+  }
+
+  .material-symbols-outlined{
+    top: 4px;
+    right: 6px;
   }
 }
 
