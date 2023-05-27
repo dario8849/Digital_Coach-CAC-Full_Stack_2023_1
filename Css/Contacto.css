@@ -60,6 +60,15 @@ body {
   margin-left: 20px;
   margin-right: 20px;
   font-size: 20px;
+  animation: mover 3s linear forwards, cambioColor 3s linear infinite;
+}
+@keyframes mover {
+    0%{transform: translateX(-100%);}
+    100%{transform: translateX(0%)}
+}
+@keyframes cambioColor{
+    10%{color:rgb(39, 32, 54);}
+    80%{color: #29fae8;}
 }
 
 .Bienvenidos {
