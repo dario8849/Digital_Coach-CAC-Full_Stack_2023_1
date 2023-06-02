@@ -4,11 +4,9 @@ const inputs = document.querySelectorAll('#formulario input'); //esta constante 
 
 const expresiones = {
 	nombreApellido: /^[a-zA-ZÀ-ÿ\s]{3,30}$/,    // Letras y espacios, pueden llevar acentos.
-    /* apellido: /^[a-zA-ZÀ-ÿ\s]{1,30}$/, */  // Letras y espacios, pueden llevar acentos.
-	//password: /^.{4,12}$/, // 4 a 12 digitos.
 	email: /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/, //  /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     edad: /^\d{1,2}$/,                   // 1 a 2 dígitos.
-	dir: /^[ a-zA-ZñÑáéíóúÁÉÍÓÚ0-9!#$%&'*+/=?^_`{|}~-]{3,30}$/,  // /^([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/,       // Letras y espacios, pueden llevar acentos, y no puede terminar con un espacio en blanco.
+	dir: /^[ a-zA-ZñÑáéíóúÁÉÍÓÚ0-9!#$%&'*+/=?^_`{|}~-]{3,30}$/,  // Letras y espacios, pueden llevar acentos, y no puede terminar con un espacio en blanco.
     telefono: /^\d{7,14}$/              // 7 a 14 numeros.
 };
 
@@ -20,23 +18,8 @@ const campos = {
     edad: false,
     dir: false,
     telefono: false,
-    formacion: false,   //ver estos dos!!
-    /* chekbox: false */    //ver estos dos!!
+    formacion: false
 }
-
-
-
-/* const checkboxs = document.getElementById('formacion');
-let opcionElegida = checkboxs.value; */
-
-
-/* console.log(campos.formacion); */
-
-
-/*  ver si puedo meter acá adentro la función 
-cambiarFormacion = () => {
-
-} ; */
 
 const elegirFormacion = document.querySelector('#formacion');
 
@@ -65,65 +48,6 @@ elegirFormacion.addEventListener('blur', event => {
     }
 });
 
-/* if(){
-    
-} */
-
-/* elegirFormacion.addEventListener('change', (event) => {
-    console.log("El usuario eligió la formación: " + event.target.value);
-}); */
-
-
-//si el ususrio no eligió una opción el formulario dará error por defecto sino se aplica el siguiente condicional
-/* if(elegirFormacion.value != 'Elige tu preferida...'){
-    elegirFormacion.addEventListener('change', (event) => {
-    console.log("El usuario eligió la formación: " + event.target.value);
-    campos.formacion = true;
-    console.log(campos.formacion);
-})} else {
-    console.log("No hay una opcion elegida, el Usuario no ha ingresado a este campo !");
-    console.log(campos.formacion);
-}; */
-
-
-
-
-/* elegirFormacion.addEventListener('change', (event) => {
-    console.log(elegirFormacion.value);
-    console.log("El usuario eligió la formación: " + event.target.value);
-    if(event.target.value == 'Elige tu preferida...'){
-        console.log("No hay una opcion elegida, el Usuario no ha ingresado a este campo !")
-        console.log(campos.formacion)
-    } else {
-        campos.formacion = true;
-        console.log("El Usurio Cambió la formación por defecto!!Ha seleccionado opcion: " + event.target.value);
-        console.log(campos.formacion)
-    };
-});
- */
-
-
-/* if(opcionElegida == 'Elige tu preferida...'){
-    console.log("No hay una opcion elegida !")
-    console.log(campos.formacion)
-} else {
-    console.log("Ha seleccionado opcion: " + opcionElegida)
-}; */
-
-/* const elementoTildado = document.getElementById('grupo__tildar-varias-opciones');
-var checkbox = document.querySelectorAll('#grupo__tildar-varias-opciones input');
-console.log(checkbox);
-checkbox.addEventListener("change", validaCheckbox, false);
-
-console.log(checkbox.addEventListener("change", validaCheckbox, false));
-
-function validaCheckbox(){
-  var tildado = checkbox.checked;
-  if(tildado){
-    alert('checkbox esta seleccionado');
-  }
-}; */
-
 let checkbox1 = document.getElementById('cbox1');
 let checkbox2 = document.getElementById('cbox2');
 let checkbox3 = document.getElementById('cbox3');
@@ -143,13 +67,11 @@ function validaCheckbox(){
   let tildado4 = checkbox4.checked;
 
   if(tildado1 || tildado2 || tildado3 || tildado4){
-    alert('checkbox esta seleccionado');
+    //alert('checkbox esta seleccionado');
     checkboxValidado = true;
   }
   return checkboxValidado
 };
-
-console.log('el chbx no se validó?' + checkboxValidado);
 
 const validarFormulario = (e) => {
     //para identificar cuál es el campo que queremos validar oportunamente
@@ -175,15 +97,6 @@ const validarFormulario = (e) => {
     };
 };
 
-//para cada uno de los campos
-//const validarCampo = () => {
-//    if(expresiones.nombre.test(e.target.value)){
-//        document.getElementById('grupo__nombre').classList.remove('formulario__campos-error'); //ojo acá ver si no falta alguna etiqueta!
-//     } else {
-//         document.getElementById('grupo__nombre').classList.add('formulario__campos-error'); //ojo acá ver si no falta alguna etiqueta!
-//     }
-// };
-
 const validarCampo = (expresion, input, campo) => {
     if(expresion.test(input.value)){   // acá se evalua si la expresión ingresada por el usurio es válida
         document.getElementById(`grupo__${campo}`).classList.remove('formulario__campos-error'); //Esto es para que remueva la clase de error el el input luedo de haber habido un error(o sea es para "resetear el estado del campo" y mantiene lo actualizado para cada vez que borremos información que haya sido erronea en el enput y no tener que andar actualizando continuamente el navegador)
@@ -191,8 +104,8 @@ const validarCampo = (expresion, input, campo) => {
         campos[campo] = true;
         console.log(campos);
     } else {  // esto ocurrirá si la expresión ingresada por el usuario NO es válida
-        document.getElementById(`grupo__${campo}`).classList.add('formulario__campos-error'); //ojo acá ver si no falta alguna etiqueta!
-        document.getElementById(`grupo__${campo}`).classList.add('formulario__mensaje-activo'); // ojo ver esto!! la función no agrega esta clase!!!
+        document.getElementById(`grupo__${campo}`).classList.add('formulario__campos-error'); 
+        document.getElementById(`grupo__${campo}`).classList.add('formulario__mensaje-activo'); 
         campos[campo] = false;
         console.log(campos);
     }
